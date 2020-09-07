@@ -104,7 +104,8 @@ body {
     background-color:#24b3de;
     color:white;
     opacity:0;
-    font-size:1.1em;
+    font-size:1.5em;
+    text-decoration:none;
     padding:15px;
     font-weight: bolder;
     transition:.2s;
@@ -112,9 +113,10 @@ body {
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
     animation-delay: 1.2s;
+
 }
 
-.headingcta button:hover {
+.ctabutton:hover {
     background-color:#f3c751;
     cursor:pointer;
 }
@@ -230,14 +232,6 @@ body {
 
 
 
-.consultant button {
-    outline:none;
-    border:none;
-    background-color:#24b3de;
-    color:#FFF;
-    padding:20px;
-    font-size:.7em;
-}
 
 .footer {
 
