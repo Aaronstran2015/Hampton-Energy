@@ -98,7 +98,7 @@ body {
     
 }
 
-.headingcta button {
+.ctabutton {
     border:none;
     outline:none;
     background-color:#24b3de;
@@ -188,12 +188,12 @@ body {
 }
 
 .ambassador {
-    width:75%;
+    width:100%;
     color:#fff;
     padding:20px;
     margin:20px 0;
     text-align:center;
-    background-color:rgba(63, 63, 63, 0.185);
+    background-color:rgba(63, 63, 63, 0);
     font-size:1.2em;
     margin:auto;
 }
@@ -310,7 +310,8 @@ body {
     }
 
     .ambassador {
-        margin:20px;
+        
+        width:25%;
     }
 
     .consultant {
