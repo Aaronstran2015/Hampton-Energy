@@ -1,11 +1,11 @@
-/* Orange #f3c751 */
+
 
 /* Resets */
 * {
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    font-family: candara;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
 }
 
