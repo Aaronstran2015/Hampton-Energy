@@ -43,7 +43,11 @@ body {
     text-decoration:none;
     line-height: 50px;
     font-size:1.5em;
+    transition:.2s;
+}
 
+.navlinks:hover {
+    background-color:#f3c751;
 }
 
 .navitems {
@@ -76,11 +80,22 @@ body {
 .headinglogo img {
     width: 75%;
     max-width: 700px;
+    opacity:0;
+    animation-name:an1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: .5s;
 }
 
 .headingh1 {
     color:white;
     padding:20px;
+    opacity:0;
+    animation-name:an2;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    
 }
 
 .headingcta button {
@@ -88,15 +103,31 @@ body {
     outline:none;
     background-color:#24b3de;
     color:white;
+    opacity:0;
     font-size:1.1em;
     padding:15px;
     font-weight: bolder;
+    transition:.2s;
+    animation-name:an3;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1.2s;
+}
+
+.headingcta button:hover {
+    background-color:#f3c751;
+    cursor:pointer;
 }
 
 
 .facebooklink {
     text-decoration:none;
     color:white;
+    opacity:0;
+    animation-name:an4;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1.3s;
 }
 
 /* Recode this section */
@@ -114,7 +145,7 @@ body {
     display:flex;
     flex-direction: column;
     align-items:center;
-    padding:20px 0;
+    padding:50px 0;
 
 }
 
@@ -123,7 +154,7 @@ body {
     text-align: center;
     font-size:1.2em;
     color:rgb(56, 56, 56);
-    width:75%;
+    width:100%;
 }
 
 .whysolar i {
@@ -267,6 +298,11 @@ body {
         flex-direction: row;
         justify-content: space-around;
     }
+
+    .whysolar {
+        width:25%;
+    }
+    
     
     .ambassadorcontainer {
         flex-direction: column;
