@@ -57,7 +57,7 @@ body {
 /* Heading */
 
 .heading {
-    background:url(../images/Solar\ 1.JPG) no-repeat;
+    background:url(../images/Solar\ 3.JPG) no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -68,19 +68,12 @@ body {
     text-align: center;
     height:100vh;
     min-height:600px;
-    z-index:-1;
+    z-index:-2;
 }
 
-/* Dark shader to make text more visible */
-/* .shader {
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    height:100%;
-    background-color:rgba(0, 0, 0, 0.719);
-    align-items: center;
-    justify-content: center;
-} */
+
+
+/* CSS Shader */
 
 #header1::before {
     content:"";
@@ -89,9 +82,8 @@ body {
     position:absolute;
     top:0;
     left:0;
-    background-color:#00000086;
-    z-index: 0;
-
+    background-color:#000000d2;
+    z-index: -1;
 }
 
 
@@ -99,6 +91,8 @@ body {
     width: 75%;
     max-width: 700px;
     opacity:0;
+    position:relative;
+    bottom:40px;
     animation-name:an1;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
@@ -111,55 +105,34 @@ body {
     padding:20px;
     opacity:0;
     animation-name:an2;
+    position: relative;
+    bottom:40px;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
     animation-delay: 1s;
     
 }
 
-.headingcta {
-    margin:20px 0 0 0;
-}
-
 .headingcta a {
-    border:none;
-    outline:none;
-    background-color:#24b3de;
-    color:white;
-    opacity:0;
-    font-size:1.3em;
-    text-decoration:none;
+    color:#fff;
+    text-decoration: none;
+    background-color: #24b3de;
     padding:15px;
-    font-weight: bolder;
-    transition:.2s;
-    animation-name:an3;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-delay: 1.2s;
-
-
+    font-weight: bold;
+    font-size:1.4em;
 }
 
-.ctabutton:hover {
+.headingcta a:hover {
     background-color:#f3c751;
-    cursor:pointer;
 }
 
-
-.facebooklink {
-    text-decoration:none;
+.scroll-button a {
+    text-decoration: none;
     color:white;
-    opacity:0;
-    padding:20px;
     position:absolute;
-    bottom:20px;
+    bottom:0;
     left:50%;
-    margin-left:-98px;
-    animation-name:an4;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-delay: 1.3s;
-   
+    margin:0 0 20px -48px;
 }
 
 /* Recode this section */
