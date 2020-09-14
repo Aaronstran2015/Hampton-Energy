@@ -81,6 +81,12 @@ body{
     position: relative;
     top:25px;
     font-size: 1.3rem;
+    transition:.3s ease;
+}
+
+#heading #click-funnel:hover {
+    background-color: var(--secondarycolor);
+    color:var(--iconcolor);
 }
 
 #heading #scroll-button {
@@ -90,6 +96,25 @@ body{
     margin: 0 0 10px -48px;
     text-decoration: none;
     color: #fff;
+    animation-name:bounce;
+    animation-duration:1.5s;
+    animation-delay:0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes bounce {
+    33% {
+        transform: translateY(5px);
+    }
+
+    33% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 /* Why solar section */
@@ -125,6 +150,16 @@ body{
     margin:20px 0 0 0;
     color:var(--iconcolor);
     font-weight: 600;
+    transition:.3s ease;
+}
+
+.whysolar a:hover {
+    background-color: var(--primarycolor);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Ambassador Section */
@@ -183,6 +218,12 @@ body{
     font-weight:600;
     color:var(--offwhite);
     text-decoration: none;
+    transition: .3s ease;
+}
+
+.consultant a:hover {
+    background-color: var(--secondarycolor);
+    color:var(--iconcolor);
 }
 
 /* Footer section */
@@ -225,4 +266,20 @@ body{
     text-decoration: underline;
     padding:10px;
     color:var(--offwhite);
+}
+
+
+/* Larger Screens */
+
+@media only screen and (min-width:1000px) {
+
+    .flex-container {
+        flex-direction:row;
+    }
+
+    .whysolar, .ambassador {
+        padding:20px;
+        margin:0 0 0 0;
+    }
+
 }
