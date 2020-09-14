@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+    z-index: 1;
 }
 
 /* Mobile Screen Size */
@@ -13,331 +14,160 @@
     width:100%;
 }
 
-body {
-    position:relative;
-    min-width:320px;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #24b3de;
-    position:fixed;
-    top:0;
-    z-index: 1;
-    width:100%;
-}
-
-.navbardesktop {
-    display:none;
-}
-
-.navlist {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.navlinks {
-    color:#fff;
-    text-decoration:none;
-    line-height: 50px;
-    font-size:1.5em;
-    padding:0 10px;
-    transition:.2s;
-}
-
-.navlinks:hover {
-    background-color:#f3c751;
-}
-
-.navitems {
-    list-style-type: none;
-}
-
-/* Heading */
-
-.heading {
-    background:url(../images/Solar\ 3.JPG) no-repeat;
+#heading-container {
+    width:100vw;
+    height:100vh;
+    background-image: url(../images/solar\ 3.jpg);
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height:100vh;
-    min-height:600px;
-    z-index:-2;
+    position:relative;
 }
 
-
-
-/* CSS Shader */
-
-#header1::before {
+#heading-container::after {
     content:"";
-    width:100%;
-    height:100%;
     position:absolute;
     top:0;
     left:0;
-    background-color:#000000d2;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.74);
     z-index: -1;
 }
 
-
-.headinglogo img {
-    width: 75%;
-    max-width: 700px;
-    opacity:0;
-    position:relative;
-    bottom:40px;
-    animation-name:an1;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-delay: .5s;
-    z-index: 1;
-}
-
-.headingh1 {
-    color:white;
-    padding:20px;
-    opacity:0;
-    animation-name:an2;
-    position: relative;
-    bottom:40px;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    
-}
-
-.headingcta a {
-    color:#fff;
-    text-decoration: none;
-    background-color: #24b3de;
-    padding:15px;
-    font-weight: bold;
-    font-size:1.4em;
-    transition:.1s ease-in;
-    z-index: 5;
-}
-
-.headingcta a:hover {
-    background-color:#f3c751;
-}
-
-/* .scroll-button a {
-    text-decoration: none;
-    color:white;
-    position:absolute;
-    bottom:0;
-    left:50%;
-    margin:0 0 20px -48px;
-} */
-
-/* Recode this section */
-
-/* Heading Animations */
-@keyframes an1 {to {opacity:1;}}
-@keyframes an2 {to {opacity:1;}}
-@keyframes an3 {to {opacity:1;}}
-@keyframes an4 {to {opacity:1;}}
-
-
-/* Why Solar Section */
-
-.whysolarcontainer {
+#heading {
     display:flex;
-    flex-direction: column;
     align-items:center;
-    padding:50px 0;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position:relative;
+    height:100%;
+    width:100%;
+}
 
+#heading .heading-img {
+    width:75%;
+    max-width:500px;
+    padding:0 50px 0 50px;
+    
+
+}
+
+#heading h1 {
+    color:#fff;
+    padding:0 50px 0 50px;
+
+}
+
+#heading #click-funnel {
+    text-decoration:none;
+    color:#fff;
+    width:220px;
+    max-width: 320px;
+    background-color:#22b4de;
+    padding:10px;
+    margin:20px 0 0 0;
+    font-weight: bold;
+    outline:none;
+    border:none;
+    border-radius:2px;
+    transition: .1s ease-in;
+}
+
+#heading #click-funnel:hover {
+    background-color:#dbb249;
+}
+
+#heading #scroll-button {    
+    text-decoration: none;
+    color:#fff;
+    position: absolute;
+    bottom:0;
+    margin:0 0 10px 0;
+    font-size:.7em;
+
+}
+
+/* Why Section */
+
+#why-container {
+    width:100vw;
+    background-color:#fff;
+}
+
+#why, #ambassador, #consultant {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    text-align: center;
+    padding:50px;
+    width:100%;
 }
 
 .whysolar {
-    padding:20px;
-    text-align: center;
-    font-size:1.2em;
-    color:rgb(56, 56, 56);
-    width:100%;
+    margin: 0 0 50px 0;
 }
 
-.whysolar i {
-    font-size:5em;
-    color:rgb(92, 92, 92);
-    transition:.2s;
-}
-
-.whysolar i:hover {
-    color:rgb(49, 49, 49);
-    cursor:pointer;
+.whysolar i{
+    font-size:4em;
+    color:rgba(20, 20, 20, 0.651);
 }
 
 .whysolar a {
-    outline:none;
+    outline: none;
     border:none;
-    padding:15px;
-    background-color:#f3c751;
+    text-decoration: none;
     color:white;
-    font-weight: bold;
-    transition:.1s ease-in;
+    background-color:#dbb249;
+    padding:10px;
+    display: inline-block;
+    margin-top: 5px;
+    transition: .1s ease-in;
 }
 
 .whysolar a:hover {
-    background-color: #24b3de;
+    background-color: #22b4de;
 }
+
 /* Ambassador Section */
 
-.ambassadorcontainer {
-    background-color:#24b3de;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding:20px 0;
-    
+#ambassador-container {
+    width:100vw;
+    background-color:#2494b3;
+}
+
+#ambassador {
+    color:#fff;
 }
 
 .ambassador {
-    width:100%;
-    color:#fff;
-    padding:20px;
-    margin:20px 0;
-    text-align:center;
-    background-color:rgba(63, 63, 63, 0);
-    font-size:1.2em;
-    margin:auto;
-}
+    margin: 0 0 50px 0;
 
-#ambassador1 {
-    background-color:transparent;
-    color:#fff;
-    font-size:2em;
-    width:100%;
 }
 
 .ambassador i{
-    font-size:5em;
-    color:#f3c751;
+    font-size:4em;
+    color:#dbb249;
 }
 
-/* Consultant Section */
-.consultantcontainer {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding:20px 0;
+.ambassador a {
+    /* Add css here */
 }
 
-.consultant {
-    width:100%;
-    color:rgb(56, 56, 56);
-    padding:20px;
-    margin:20px 0;
-    text-align:center;
-    font-size:2em;
-}
+/* Consultant section */
 
+#consultant-container {
+    width:100vw;
+    background-color: #fff;
+}
 
 .consultant a {
-    border:none;
-    outline:none;
-    background-color:#24b3de;
+    text-decoration: none;
     color:white;
-    text-decoration:none;
-    padding:15px;
-    transition:.2s;
-    font-size:.7em;
-}
-
-.consultant a:hover {
-    background-color:#f3c751;
+    background-color:#22b4de;
+    padding:10px;
 }
 
 
-.footer {
-    background-color:#5c5c5c;
-    color:white;
-    width:100%;
-    line-height: 50px;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-
-.footer a {
-    color:white;
-}
-
-
-/* Breakpoint for screens larger than 768px */
-
-@media only screen and (min-width:768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-
-
-    .navbar {
-        display:none;
-    }
-
-    .navbardesktop {
-        display:initial;
-        background-color: #24b3de;
-        position:fixed;
-        top:0;
-        z-index: 1;
-        width:100%;
-    }
-
-    .navlist {
-        justify-content: left;
-    }
-
-    .navlinks {
-        font-size:1.2em;
-        padding:0 20px;
-    }
-    
-    .headinglogo img {
-        max-width: 700px;
-    }
- 
-    .whysolarcontainer {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    
-    .ambassadorcontainer {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .ambassador {
-        
-        width:25%;
-    }
-
-    .consultant {
-        margin:20px;
-    }
-
-    .flexcontainer {
-        display:flex;
-        flex-direction: row;
-    }
-
-    }

@@ -14,80 +14,66 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
+    
     <title>Hamton Energy | Solar Power Consultant in Morehead City</title>
 </head>
 <body>
     <!-- Heading -->
-    <div class="row">
-        <div id="heading" class="col-12 heading ">
-
-                <div id="header1" class="headinglogo">
-                    <img id="hamptonenergy" class="headerimage" src="images/white_logo_transparent_background.png" alt="Image">
-                </div>
-
-                <div id="header2" class="headinglogo">
-                    <img id="independent" class="headerimage" src="images/independent_logo_blue.png" alt="">
-                </div>
-
-                <div id="header3" class="headingh1">
-                    <h1>Save money on electricty and<br> GO SOLAR!</h1>
-                </div>
-
-                <div id="header4" class="headingcta">
-                    <a href="https://powur.com/solar?amb=23995">Click for a FREE estimate!</a>
-                </div>
-                
-                <div id="header5" class="scroll-button">
-                    <a href="#why">Click or Scroll <br><i class="fas fa-angle-down"></i></a>
-                </div>
+    <div id="heading-container" class="row">
+        <div id="heading" class="col-mobile">
+            <img class="heading-img" src="/dist/images/white_logo_transparent_background.png" alt="">
+            <img class="heading-img" src="/dist/images/independent_logo_blue.png" alt="">
+            <h1>Save money on electricity in Morehead City by going solar!</h1>
+            <a href="https://powur.com/solar?amb=23995" id="click-funnel">Click for a FREE estimate!</a>
+            <a href="#why" id="scroll-button">Click or Scroll<br><i class="fas fa-angle-down"></i></a>
         </div>
     </div>
 
     <!-- Why Solar -->
 
-    <div class="row">
-        <div id="why" class="col-12 whysolarcontainer">
+    <div id="why-container" class="row">
+        <div id="why" class="col-mobile">
+            
             <div id="whysolar1" class="whysolar">
-                <!-- $ Icon -->
+                <h2>Why should you go solar?</h2>
+            </div>
+
+            <div id="whysolar2" class="whysolar">
                 <i class="fas fa-dollar-sign"></i>
                 <br><br>
                 <h3>Save Money</h3>
                 <p>The cost of electricity has rose by 40% in the past decade. Solar power is now the smart and affordable option.</p>
-                <br><button href="">Learn More</button>
+                <br><a href="">Learn More</a>
             </div>
-            <div id="whysolar2" class="whysolar">
+            <div id="whysolar3" class="whysolar">
                 <i class="fas fa-chart-line"></i>
                 <br><br>
                 <h3>Increase Home Value</h3>
                 <p>Solar panels add an average of $4965 per kilowatt to the resale value of homes.</p>
-                <br><button href="">Learn More</button>
+                <br><a href="">Learn More</a>
             </div>
-            <div id="whysolar3" class="whysolar">
+            <div id="whysolar4" class="whysolar">
                 <i class="fas fa-file-invoice"></i>
                 <br><br>
                 <h3>Huge Tax Breaks</h3>
                 <p>The Investment Tax Credit (ITC) allows you to deduct up to 26% of the cost of solar installation from your federal taxes.</p>
-                <br><button href="">Learn More</button>
+                <br><a href="">Learn More</a>
             </div>
         </div>
     </div>
     
     <!-- Ambassador -->
 
-    <div class="row">
-        
-        <div id="ambassador" class="col-12 ambassadorcontainer">
-            
+    <div id="ambassador-container" class="row">
+        <div id="ambassador" class="col-mobile">
             
                 <div id="ambassador1" class="ambassador">
                     <h2>Become an Ambassador</h2>
                     <h4>The process is simple.</h4>
                 </div>
-
-
+            <!-- This flex container is so that the div's will align horizontally on desktops -->
             <div class="flexcontainer">
                 <div id="ambassador2" class="ambassador" >
-    
                     <i class="fas fa-user-plus"></i>
                     <br><br>
                     <h3>Sign up</h3>
@@ -112,14 +98,15 @@
     </div>
     <div class="row">
         
-        <div id="consultant" class="col-12 consultantcontainer">
+        <div id="consultant-container" class="row">
+            <div id="consultant" class="col-mobile">
                 <div id="consultant1" class="consultant">
                     <h2>Become a Consultant</h2>
-                    <h4>Join the movement and become an independant Powur Consultant!</h4>
+                    <p>Join the movement and become an Independant Powur Consultant!</p>
                     <br>
-                    <a href=" https://powur.com/hamptonenergy/join">Join Now!</a>
-                </div>
-
+                    <a href="https://powur.com/hamptonenergy/join">Join Now!</a>
+                </div>  
+            </div>
         </div>
     </div>
 </body>
