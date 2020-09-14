@@ -1,3 +1,11 @@
+/* Variables */
+:root {
+    --primarycolor: #22b4de; 
+    --secondarycolor: #dbb249;
+    --iconcolor:rgb(39, 39, 39);
+    --offwhite:rgb(238, 238, 238);
+}
+
 
 /* Resets */
 * {
@@ -7,167 +15,214 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
     z-index: 1;
+
 }
 
-body {
+body{
     min-width: 320px;
 }
 
 #heading-container {
     height:100vh;
-    width:100vw;
-    background-image: url(../images/solar\ 3.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
+    background:url(../images/solar\ 3.jpg) no-repeat center center;
     background-size: cover;
-    position:relative;
+    z-index:-1;
 }
 
 #heading-container::after {
     content:"";
-    position:absolute;
+    width:100%;
+    min-width: 320px;
+    height: 100%;
+    position: absolute;
     top:0;
     left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(0, 0, 0, 0.74);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.685);
+    z-index: 0;
 }
 
 #heading {
-    display:flex;
-    align-items:center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    position:relative;
-    padding:0 50px 0 50px;
     height:100%;
-    width:100%;
+    position: relative;
+    box-shadow:5px 0px 20px 15px var(--iconcolor);
+    animation-name: fade-in;
+    animation-duration:3s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+@keyframes fade-in {
+    to {
+        opacity:1;
+    }
 }
 
 #heading .heading-img {
-    max-width: 600px;
-    width:100%;
+    widows: 100%;
+    max-width:320px;
 }
 
 #heading h1 {
-    color:#fff;
-
+    color:var(--offwhite);
+    max-width: 550px;
 }
 
 #heading #click-funnel {
-    text-decoration:none;
-    color:#fff;
-    max-width: 320px;
-    background-color:#22b4de;
-    padding:10px;
-    margin:20px 0 0 0;
-    font-weight: bold;
-    outline:none;
-    border:none;
-    border-radius:2px;
-    transition: .1s ease-in;
-}
-
-#heading #click-funnel:hover {
-    background-color:#dbb249;
-}
-
-#heading #scroll-button {    
     text-decoration: none;
-    color:#fff;
-    position: absolute;
-    bottom:0;
-    margin:0 0 10px 0;
-    font-size:.7em;
-
+    color:white;
+    background-color:var(--primarycolor);
+    padding:10px;
+    position: relative;
+    top:25px;
+    font-size: 1.3rem;
 }
 
-/* Why Section */
+#heading #scroll-button {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    margin: 0 0 10px -48px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Why solar section */
 
 #why-container {
-    background-color:#fff;
+    background-color:var(--offwhite);
+    color:var(--iconcolor);
+    padding:50px 20px 25px 20px;
 }
 
-#why, #ambassador, #consultant {
+#why {
     display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
-    padding:50px;
-    width:100%;
 }
 
 .whysolar {
-    margin: 0 0 50px 0;
+    margin: 0 0 40px 0;
 }
 
-.whysolar i{
-    font-size:4em;
-    color:rgba(20, 20, 20, 0.651);
+.whysolar i {
+    font-size: 5rem;
+    margin: 0 0 10px 0;
 }
 
 .whysolar a {
-    outline: none;
-    border:none;
     text-decoration: none;
-    color:white;
-    background-color:#dbb249;
-    padding:10px;
+    background-color: var(--secondarycolor);
     display: inline-block;
-    margin-top: 5px;
-    transition: .1s ease-in;
-}
-
-.whysolar a:hover {
-    background-color: #22b4de;
+    padding:10px;
+    margin:20px 0 0 0;
+    color:var(--iconcolor);
+    font-weight: 600;
 }
 
 /* Ambassador Section */
 
 #ambassador-container {
-    width:100vw;
-    background-color:#2494b3;
+    background-color: var(--iconcolor);
+    color:var(--offwhite);
+    padding:50px 20px 25px 20px;
 }
 
 #ambassador {
-    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color:var(--offwhite);
+
 }
 
 .ambassador {
-    margin: 0 0 50px 0;
-
+    margin: 0 0 40px 0;
 }
 
-.ambassador i{
-    font-size:4em;
-    color:#dbb249;
+.ambassador i {
+    font-size: 5rem;
+    color:var(--secondarycolor);
+    margin: 0 0 10px 0;
+}
+
+.ambassador a {
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--primarycolor);
 }
 
 /* Consultant section */
 
 #consultant-container {
-    background-color: #fff;
+    background-color: var(--offwhite);
+    color:var(--iconcolor);
+    padding:50px 20px 25px 20px;
+}
+
+.consultant {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .consultant a {
-    text-decoration: none;
-    color:white;
-    background-color:#22b4de;
+    background-color: var(--primarycolor);
     padding:10px;
+    font-size: 1.1rem;
+    font-weight:600;
+    color:var(--offwhite);
+    text-decoration: none;
 }
 
-/* Breakpoint Tablet */
+/* Footer section */
 
-@media only screen and (min-width:768px) {
-
-    body {
-        font-size:1.3em;
-    }
-
-
+#footer-container {
+    background-color: var(--iconcolor);
 }
 
+#footer {
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.footer {
+    color:var(--offwhite);
+}
+
+.footer p {
+    padding: 10px;
+}
+
+.footer p a {
+    color:var(--offwhite);
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: underline;
+    padding:10px;
+    color:var(--offwhite);
+}
