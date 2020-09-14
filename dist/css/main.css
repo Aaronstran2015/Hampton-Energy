@@ -9,14 +9,13 @@
     z-index: 1;
 }
 
-/* Mobile Screen Size */
-[class*="col-"] {
-    width:100%;
+body {
+    min-width: 320px;
 }
 
 #heading-container {
-    width:100vw;
     height:100vh;
+    width:100vw;
     background-image: url(../images/solar\ 3.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -42,28 +41,24 @@
     flex-direction: column;
     text-align: center;
     position:relative;
+    padding:0 50px 0 50px;
     height:100%;
     width:100%;
 }
 
 #heading .heading-img {
-    width:75%;
-    max-width:500px;
-    padding:0 50px 0 50px;
-    
-
+    max-width: 600px;
+    width:100%;
 }
 
 #heading h1 {
     color:#fff;
-    padding:0 50px 0 50px;
 
 }
 
 #heading #click-funnel {
     text-decoration:none;
     color:#fff;
-    width:220px;
     max-width: 320px;
     background-color:#22b4de;
     padding:10px;
@@ -92,7 +87,6 @@
 /* Why Section */
 
 #why-container {
-    width:100vw;
     background-color:#fff;
 }
 
@@ -152,14 +146,9 @@
     color:#dbb249;
 }
 
-.ambassador a {
-    /* Add css here */
-}
-
 /* Consultant section */
 
 #consultant-container {
-    width:100vw;
     background-color: #fff;
 }
 
@@ -168,6 +157,17 @@
     color:white;
     background-color:#22b4de;
     padding:10px;
+}
+
+/* Breakpoint Tablet */
+
+@media only screen and (min-width:768px) {
+
+    body {
+        font-size:1.3em;
+    }
+
+
 }
 
 
