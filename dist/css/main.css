@@ -120,20 +120,22 @@ body {
     padding:15px;
     font-weight: bold;
     font-size:1.4em;
+    transition:.1s ease-in;
+    z-index: 5;
 }
 
 .headingcta a:hover {
     background-color:#f3c751;
 }
 
-.scroll-button a {
+/* .scroll-button a {
     text-decoration: none;
     color:white;
     position:absolute;
     bottom:0;
     left:50%;
     margin:0 0 20px -48px;
-}
+} */
 
 /* Recode this section */
 
@@ -173,13 +175,18 @@ body {
     cursor:pointer;
 }
 
-.whysolar button {
+.whysolar a {
     outline:none;
     border:none;
     padding:15px;
     background-color:#f3c751;
     color:white;
     font-weight: bold;
+    transition:.1s ease-in;
+}
+
+.whysolar a:hover {
+    background-color: #24b3de;
 }
 /* Ambassador Section */
 
@@ -229,8 +236,9 @@ body {
     padding:20px;
     margin:20px 0;
     text-align:center;
-    font-size:2em;   
+    font-size:2em;
 }
+
 
 .consultant a {
     border:none;
@@ -240,6 +248,7 @@ body {
     text-decoration:none;
     padding:15px;
     transition:.2s;
+    font-size:.7em;
 }
 
 .consultant a:hover {
@@ -309,11 +318,6 @@ body {
     .whysolarcontainer {
         flex-direction: row;
         justify-content: space-around;
-    }
-
-    .whysolar:nth-child(odd) {
-        justify-content:left;
-        
     }
     
     
