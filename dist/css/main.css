@@ -48,9 +48,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     height:100%;
     position: relative;
+    text-align: center;
     box-shadow:5px 0px 20px 15px var(--iconcolor);
     animation-name: fade-in;
     animation-duration:3s;
@@ -59,21 +59,25 @@ body{
     opacity:0;
 }
 
+#heading h1 {
+    font-size:4rem;
+}
+.imagebar {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
 @keyframes fade-in {
     to {
         opacity:1;
     }
 }
 
-#heading .heading-img {
-    widows: 100%;
-    max-width:320px;
-}
-
 #heading h1 {
     color:var(--offwhite);
     padding:0 20px 0 20px;
-    max-width: 550px;
 }
 
 #heading #click-funnel {
@@ -82,6 +86,7 @@ body{
     background-color:var(--primarycolor);
     padding:10px;
     position: relative;
+    text-align: center;
     top:25px;
     font-size: 1.3rem;
     transition:.3s ease;
