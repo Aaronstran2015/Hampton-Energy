@@ -69,6 +69,20 @@ body{
     width:100%;
 }
 
+@media only screen and (max-width:850px) {
+    .imagebar {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+
+    #heading h1 {
+        font-size: 2rem;
+    }
+}
+
 @keyframes fade-in {
     to {
         opacity:1;
